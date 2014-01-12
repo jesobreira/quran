@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Al Qur'an</title>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="quran.css" />
+	<script src="jquery-1.6.2.min.js"></script>
+	<script src="jquery.mobile-1.3.1.min.js"></script>
+	<script type="text/javascript" src="quran.db.js"></script>
+	<script type="text/javascript" src="quran.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header" data-theme="e">
+		<select name="quran" id="quran" onChange="gosura(this.value);" data-icon="false" data-theme="e">
+			
+<option value="0" selected>Al Qur'an</option>
+			<option value="1">1. Al-Fatiha (A abertura)</option>
+			<option value="2">2. Al-Baqara (A vaca)</option>
+			<option value="3">3. Al Imran (A Família de Joaquim)</option>
+			<option value="4">4. An-Nisa (As Mulheres)</option>
+			<option value="5">5. Al-Ma'ida (A Mesa Servida)</option>
+			<option value="6">6. Al-An'am (O Gado)</option>
+			<option value="7">7. Al-A'raf (Os Cimos)</option>
+			<option value="8">8. Al-Anfal (Os Espólios)</option>
+			<option value="9">9. At-Tawba (O Arrependimento)</option>
+			<option value="10">10. Yunus (Jonas)</option>
+			<option value="11">11. Hud (Hud)</option>
+			<option value="12">12. Yusuf (José)</option>
+			<option value="13">13. Ar-Ra'd (O Trovão)</option>
+			<option value="14">14. Ibrahim (Abraão)</option>
+			<option value="15">15. Al-Hijr (Alhijr)</option>
+			<option value="16">16. An-Nahl (As Abelhas)</option>
+			<option value="17">17. Al-Isra (A Viagem Noturna)</option>
+			<option value="18">18. Al-Kahf (A Caverna)</option>
+			<option value="19">19. Maryam (Maria)</option>
+			<option value="20">20. Ta-Ha (Ta-Ha)</option>
+			<option value="21">21. Al-Anbiya (Os Profetas)</option>
+			<option value="22">22. Al-Hajj (A Peregrinação)</option>
+			<option value="23">23. Al-Muminun (Os fiéis)</option>
+			<option value="24">24. An-Noor (A Luz)</option>
+			<option value="25">25. Al-Furqan (O Discernimento)</option>
+			<option value="26">26. Ash-Shu'ara (Os Poetas)</option>
+			<option value="27">27. An-Naml (As Formigas)</option>
+			<option value="28">28. Al-Qisas (As Narrativas)</option>
+			<option value="29">29. Al-Ankabut (A Aranha)</option>
+			<option value="30">30. Ar-Rum (Os bizantinos)</option>
+			<option value="31">31. Luqman (Lucman)</option>
+			<option value="32">32. As-Sajda (A Prostação)</option>
+			<option value="33">33. Al-Ahzab (Os Partidos)</option>
+			<option value="34">34. Saba (Sabá)</option>
+			<option value="35">35. Fatir (O Criador)</option>
+			<option value="36">36. Ya-Seen (Ya-seen)</option>
+			<option value="37">37. As-Saaffat (Os Enfileirados)</option>
+			<option value="38">38. Sad (A Letra Sad)</option>
+			<option value="39">39. Az-Zumar (Os Grupos)</option>
+			<option value="40">40. Al-Ghafir (O Remissório)</option>
+			<option value="41">41. Fussilat (Os Detalhados)</option>
+			<option value="42">42. Ash-Shura (A Consulta)</option>
+			<option value="43">43. Az-Zukhruf (Os Ornamentos)</option>
+			<option value="44">44. Ad-Dukhan (A Fumaça)</option>
+			<option value="45">45. Al-Jathiya (O Genuflexo)</option>
+			<option value="46">46. Al-Ahqaf (As Dunas)</option>
+			<option value="47">47. Muhammad (Maomé)</option>
+			<option value="48">48. Al-Fath (O Triunfo)</option>
+			<option value="49">49. Al-Hujraat (Os Aposentos)</option>
+			<option value="50">50. Qaf (A Letra Caf)</option>
+			<option value="51">51. Adh-Dhariyat (Os Ventos Disseminadores)</option>
+			<option value="52">52. At-Tur (O Monte)</option>
+			<option value="53">53. An-Najm (A Estrela)</option>
+			<option value="54">54. Al-Qamar (A Lua)</option>
+			<option value="55">55. Ar-Rahman (O Clemente)</option>
+			<option value="56">56. Al-Waqia (O Evento Inevitável)</option>
+			<option value="57">57. Al-Hadid (O Ferro)</option>
+			<option value="58">58. Al-Mujadila (A Discussão)</option>
+			<option value="59">59. Al-Hashr (O Desterro)</option>
+			<option value="60">60. Al-Mumtahina (A Examinada)</option>
+			<option value="61">61. As-Saff (As Fileiras)</option>
+			<option value="62">62. Al-Jumua (A Sexta-feira)</option>
+			<option value="63">63. Al-Munafiqoon (Os Hipócritas)</option>
+			<option value="64">64. At-Taghabun (As Defraudações Recíprocas)</option>
+			<option value="65">65. At-Talaq (O Divórcio)</option>
+			<option value="66">66. At-Tahrim (As Proibições)</option>
+			<option value="67">67. Al-Mulk (A Soberania)</option>
+			<option value="68">68. Al-Qalam (O Cálamo)</option>
+			<option value="69">69. Al-Haaqqa (A Realidade)</option>
+			<option value="70">70. Al-Maarij (As Vias de Ascensão)</option>
+			<option value="71">71. Nooh (Noé)</option>
+			<option value="72">72. Al-Jinn (Os Gênios)</option>
+			<option value="73">73. Al-Muzzammil (O Acobertado)</option>
+			<option value="74">74. Al-Muddaththir (O Emantado)</option>
+			<option value="75">75. Al-Qiyama (A Ressureição)</option>
+			<option value="76">76. Al-Insan (O Ser Humano)</option>
+			<option value="77">77. Al-Mursalat (Os Enviados)</option>
+			<option value="78">78. An-Naba (A Notícia)</option>
+			<option value="79">79. An-Naziat (Os Arrebatadores)</option>
+			<option value="80">80. Abasa (O Austero)</option>
+			<option value="81">81. At-Takwir (O Enrolamento)</option>
+			<option value="82">82. Al-Infitar (O Fendimento)</option>
+			<option value="83">83. Al-Mutaffifin (Os Fraudadores)</option>
+			<option value="84">84. Al-Inshiqaq (A Fenda)</option>
+			<option value="85">85. Al-Burooj (As Constelações)</option>
+			<option value="86">86. At-Tariq (O Visitante Noturno)</option>
+			<option value="87">87. Al-Ala (O Altíssimo)</option>
+			<option value="88">88. Al-Ghashiya (O Evento Assolador)</option>
+			<option value="89">89. Al-Fajr (A Aurora)</option>
+			<option value="90">90. Al-Balad (A Metrópole)</option>
+			<option value="91">91. Ash-Shams (O Sol)</option>
+			<option value="92">92. Al-Lail (A Noite)</option>
+			<option value="93">93. Ad-Dhuha (As Horas da Manhã)</option>
+			<option value="94">94. Al-Inshirah (O Conforto)</option>
+			<option value="95">95. At-Tin (O Figo)</option>
+			<option value="96">96. Al-Alaq (O Coágulo)</option>
+			<option value="97">97. Al-Qadr (O Decreto)</option>
+			<option value="98">98. Al-Bayyina (A Evidência)</option>
+			<option value="99">99. Az-Zalzala (O Terremoto)</option>
+			<option value="100">100. Al-Adiyat (Os Corcéis)</option>
+			<option value="101">101. Al-Qaria (A Calamidade)</option>
+			<option value="102">102. At-Takathur (A Cobiça)</option>
+			<option value="103">103. Al-Asr (A Era)</option>
+			<option value="104">104. Al-Humaza (O Difamador)</option>
+			<option value="105">105. Al-Fil (O Elefante)</option>
+			<option value="106">106. Quraysh (Coraixitas)</option>
+			<option value="107">107. Al-Ma'un (Os Obséquios)</option>
+			<option value="108">108. Al-Kawthar (A Abundância)</option>
+			<option value="109">109. Al-Kafirun (Os Incrédulos)</option>
+			<option value="110">110. An-Nasr (O Socorro)</option>
+			<option value="111">111. Al-Masadd (O Esparto)</option>
+			<option value="112">112. Al-Ikhlas (A Sinceridade)</option>
+			<option value="113">113. Al-Falaq (A Alvorada)</option>
+			<option value="114">114. Al-Nas (A Humanidade)</option>
+		</select>
+	</div><!-- /header -->
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="e" style="display: none" id="footerSlider">
+		<input type="range" id="verseSlider" min="0" max="100" value="50">
+	</div>
+	
+	<div data-role="content">	
+		<span id="suratext"><center><p style="text-shadow: 0px 0px 3px black;">O ALCORÃO</p><img src="icon.png" style="max-width: 100%; " /><br/>
+		<big>www.androidquran.blogspot.com.br</big>
+		<p>
+			<a href="#pageAbout" data-role="button" data-theme="e" data-inline="true">Sobre</a>
+		</p></center></span>
+	</div><!-- /content -->
+	
+	
+</div><!-- /page -->
+
+<div data-role="dialog" id="pageAbout">
+	<div data-role="header" data-theme="d">
+		<h1>Al Qur'an</h1>
+
+	</div>
+
+	<div data-role="content" data-theme="c">
+		<h1>Al Qur'an <sup><small>v1.5b2</small></sup></h1>
+		<h2>Em nome de Allah.</h2>
+		<p>Desenvolvido por <a href="mailto:jefrey.sobreira@gmail.com">Jefrey S. Santos</a>.</p>
+		<p><marquee scrolldelay="100">Textos obtidos de <i>Listen2Quran.com</i> (português) e <i>Tanzil.net</i> (árabe) &middot; Ícone por <a href="http://ademmm.deviantart.com/" target="_blank">Ademmm.deviantart.com</i> &middot; Agradecimentos a <i>Jackson Benete Ferreira</i> e <i>Yudhistira Bayu Wryatsongko</i> &middot; Agradecimentos especiais a <i>Adliya Hikmawati</i>.</marquee></p>
+	</div>
+</div>
+
+<div data-role="popup" id="popupDiv" data-position="fixed">
+	<a href="#" id="closePopup" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right" style="display: none">Fechar</a>
+	<p id="popupText"><p>
+</div>
+</body>
+</html>
